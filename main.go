@@ -14,6 +14,7 @@ func main() {
 		api.GET("/", func(ctx *gin.Context) {
 			ctx.JSON(200, gin.H{"msg": "index page"})
 		})
+		api.POST("/todo", todoPost)
 	}
 
 	router.NoRoute(func(ctx *gin.Context) {
